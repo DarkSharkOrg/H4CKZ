@@ -9,24 +9,29 @@
 <body>
     <div class="container">
         <h1>Admin Panel</h1>
-        
-        
-        <!-- Prediction and Key Management (Initially Hidden) -->
+
+        <!-- Admin Login Section -->
+        <div id="admin-login">
+            <label for="adminPassword">Enter Admin Password:</label>
+            <input type="password" id="adminPassword" placeholder="Password">
+            <button onclick="validateAdmin()">Login</button>
+        </div>
+
+        <!-- Admin Functions: Hidden Until Login -->
         <div id="admin-panel" style="display: none;">
-            <div id="prediction-update">
-                <label for="periodNumber">Period Number:</label>
-                <input type="text" id="periodNumber">
-                <label for="predictionText">Prediction Text:</label>
-                <input type="text" id="predictionTextAdmin">
-                <label for="predictionTime">Prediction Time:</label>
-                <input type="datetime-local" id="predictionTimeAdmin">
-                <button onclick="updatePrediction()">Update Prediction</button>
-            </div>
-            <div id="key-management">
-                <label for="newKey">Add New Key:</label>
-                <input type="text" id="newKey">
-                <button onclick="addKey()">Add Key</button>
-            </div>
+            <h2>Update Prediction</h2>
+            <label for="periodNumber">Period Number:</label>
+            <input type="text" id="periodNumber">
+            <label for="predictionText">Prediction Text:</label>
+            <input type="text" id="predictionTextAdmin">
+            <label for="predictionTime">Prediction Time:</label>
+            <input type="datetime-local" id="predictionTimeAdmin">
+            <button onclick="updatePrediction()">Update Prediction</button>
+            
+            <h2>Manage Access Keys</h2>
+            <label for="newKey">Add New Key:</label>
+            <input type="text" id="newKey">
+            <button onclick="addKey()">Add Key</button>
         </div>
     </div>
     <script src="scripts.js"></script>
