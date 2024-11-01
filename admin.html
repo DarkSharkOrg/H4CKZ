@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        
+        <!-- Login Section -->
+        <div id="admin-login">
+            <label for="adminPassword">Enter Admin Password:</label>
+            <input type="password" id="adminPassword">
+            <button onclick="validateAdmin()">Login</button>
+        </div>
+
+        <!-- Prediction and Key Management (Initially Hidden) -->
+        <div id="admin-panel" style="display: none;">
+            <div id="prediction-update">
+                <label for="periodNumber">Period Number:</label>
+                <input type="text" id="periodNumber">
+                <label for="predictionText">Prediction Text:</label>
+                <input type="text" id="predictionTextAdmin">
+                <label for="predictionTime">Prediction Time:</label>
+                <input type="datetime-local" id="predictionTimeAdmin">
+                <button onclick="updatePrediction()">Update Prediction</button>
+            </div>
+            <div id="key-management">
+                <label for="newKey">Add New Key:</label>
+                <input type="text" id="newKey">
+                <button onclick="addKey()">Add Key</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

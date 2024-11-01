@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Predictions</h1>
+        <div id="login-section">
+            <label for="accessKey">Enter Access Key:</label>
+            <input type="password" id="accessKey">
+            <button onclick="validateKey()">Submit</button>
+        </div>
+        <div id="prediction-section" style="display: none;">
+            <h2>Prediction</h2>
+            <p id="predictionText"></p>
+            <p id="predictionTime"></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
